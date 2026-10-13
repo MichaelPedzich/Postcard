@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ){
-                    GreetingImage("Hello from CSI!", "From Professor Tooker")
+                    GreetingImage("Name: Michael Pedzich", "Email: michael2004pe@gmail.com")
                 }
             }
         }
