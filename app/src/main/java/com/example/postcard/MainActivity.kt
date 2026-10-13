@@ -47,27 +47,31 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     Column(
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.Top,
         modifier = modifier.padding(8.dp)
     ) {
         Text(
             text = message,
-            fontSize = 100.sp,
-            lineHeight = 116.sp,
+            fontSize = 30.sp,
+            lineHeight = 40.sp,
             color = Color.Blue,
             textAlign = TextAlign.Center
-        )
+        )}
+    Column(
+        verticalArrangement = Arrangement.Bottom,
+        modifier = modifier.padding(8.dp)
+        ){
         Text(
             text = from,
-            fontSize = 36.sp,
-            lineHeight = 45.sp
+            fontSize = 20.sp,
+            lineHeight = 40.sp
         )
     }
 }
 
 @Composable
 fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
-    val image = painterResource(R.drawable.approved_alumni_walk_campuslife)
+    val image = painterResource(R.drawable.minimalist_mountain_sun_emblem)
     Box(modifier) {
         Image(
             painter = image,
@@ -78,7 +82,7 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
         GreetingText(
             message = message,
             from = from,
-            modifier = Modifier.fillMaxSize().padding(8.dp)
+            modifier = Modifier.matchParentSize().padding(8.dp)
         )
     }
 }
@@ -87,6 +91,6 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
 @Composable
 fun PostCardPreview() {
     PostcardTheme {
-        GreetingImage("Hello from the College of Staten Island!", "From Professor Tooker")
+        GreetingImage("Name: Michael Pedzich", "Email: michael2004pe@gmail.com")
     }
 }
